@@ -8,4 +8,17 @@ router.get('/', (req, res) => {
     .catch(err => res.status(400).json('Error: ' + err))
 })
 
+router.post('/', (req, res) => {
+
+  const newCat = new Favourite({
+    name: req.body.name,
+    url: req.body.url,
+    description: req.body.description
+  })
+
+  newCat.save()
+    .then(() => res.status(200).json('New cat added'))
+    .catch(err => res.status(400).json('Error: ' + err))
+})
+
 module.exports = router

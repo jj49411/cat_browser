@@ -10,11 +10,15 @@ const Favourite = new Schema({
     type: String,
     required: true
   },
+  description: {
+    type: String,
+    required: true
+  },
   dateAdded: {
     type: Date,
-    default: null
+    default: Date.now()
   }
 })
 
-const Favourite = mongoose.model('favourite', Favourite)
-module.exports = Favourite
+const Favourites = mongoose.model('favourite', Favourite)
+module.exports = Favourites

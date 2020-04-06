@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const bodyParse = require('body-parser')
 
 const app = express()
 const port = process.env.PORT || 5000
@@ -13,6 +14,7 @@ mongoose
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err))
 
+app.use(bodyParse.json())
 app.use('/favourites', favouritesRouter)
 
 app.listen(port, () => {
