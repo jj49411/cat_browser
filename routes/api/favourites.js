@@ -21,4 +21,17 @@ router.post('/', (req, res) => {
     .catch(err => res.status(400).json('Error: ' + err))
 })
 
+router.delete('/', (req, res) => {
+  Favourite.deleteOne({
+    name: req.body.name
+  },
+    (err, cat) => {
+      if (err) {
+        return res.send(err)
+      }
+      res.json('Cat deleted')
+    }
+  )
+})
+
 module.exports = router
