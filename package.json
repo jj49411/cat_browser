@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -22,11 +27,11 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "jest-cli": "^25.2.7",
+    "jest-cli": "^24.9.0",
     "mongoose": "^5.9.7"
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "^1.1.5",
-    "jest": "^25.2.7"
+    "jest": "^24.9.0"
   }
 }
