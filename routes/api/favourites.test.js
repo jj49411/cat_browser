@@ -43,12 +43,12 @@ describe('Favourite model unit test', () => {
     expect(err.errors.url).toBeDefined()
   })
 
-  it('should delete the selected cat from database', async () => {
-    const cat = new FavouriteModel(catMock)
-    await cat.save()
-    await cat.deleteOne({ name: 'cat' })
-    expect(cat.url).toBeDefined
-  })
+  // it('should delete the selected cat from database', async () => {
+  //   const cat = new FavouriteModel(catMock)
+  //   await cat.save()
+  //   await cat.deleteOne({ name: 'cat' })
+  //   expect(cat.url).toBeDefined()
+  // })
 
 
   afterEach(async () => {
