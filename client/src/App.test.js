@@ -5,6 +5,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 import App from './App'
 import Home from './components/Home/Home'
+import NavBar from './components/Navbar/Navbar'
 
 
 
@@ -16,20 +17,9 @@ describe('App', () => {
     wrapper = shallow(<App />)
   })
 
-  it('should show a title on home page', () => {
-    expect(wrapper.find('#title')).toBeDefined()
-    expect(wrapper.find('#title')).toHaveLength(1)
+  it('should render the NavBar Component', () => {
+    expect(wrapper.containsMatchingElement(<NavBar />)).toEqual(true)
   })
-
-  it('should have a navbar', () => {
-    expect(wrapper.find('Navbar')).toBeDefined()
-    expect(wrapper.find('Navbar')).toHaveLength(1)
-  })
-
-  it('should have 2 links on navbar', () => {
-    expect(wrapper.find('#link')).toHaveLength(2)
-  })
-
 
   it('should render the Home Component', () => {
     wrapper = mount(
