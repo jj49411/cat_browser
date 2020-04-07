@@ -5,6 +5,13 @@
 
 ## To install and run the code
 
+- Clone the repo
+- Run `$ npm install`
+- Run `$ npm run client-install`
+- Run `$ touch .env` and copy your API key 
+- Run `$ echo "API_KEY=YOUR_KEY” >> .env` replace YOUR_KEY
+- Run `$ npm run dev` to start both servers
+
 
 ## To run the test
 
