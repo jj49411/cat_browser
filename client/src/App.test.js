@@ -1,9 +1,17 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { shallow } from 'enzyme';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('App', () => {
+
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = shallow(<App />)
+  })
+
+  it('should show a title on home page', () => {
+    expect(wrapper.find('h1')).toBeDefined()
+    expect(wrapper.find('h1')).toHaveLength(1)
+  })
+})
