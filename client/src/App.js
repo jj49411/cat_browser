@@ -8,12 +8,25 @@ import NavBar from './components/Navbar/Navbar'
 
 class App extends Component {
   
+  constructor(props) {
+    super(props)
+    this.state = {
+      home: {
+        title: 'Pick up your favourites'
+      },
+      favourites: {
+        title: 'Favourites'
+      }
+    }
+  }
+
+
   render() {
     return(
       <Router>
         <NavBar />
-        <Route exact path='/' render={() => <Home />} />
-        <Route exact path='/favourites' id='favPath' render={() => <Favourites />} />
+        <Route exact path='/' render={() => <Home title={this.state.home.title}/>} />
+        <Route exact path='/favourites' id='favPath' render={() => <Favourites title={this.state.favourites.title}/>} />
       </Router>
     )
   }
