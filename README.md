@@ -11,8 +11,19 @@
 - Run `$ npm test` for the Express endpoint tests
 - Run `$ cd client && npm test` for the React tests
 
+## Features
+
 ## Technologies used
 
+
+### External Cat API
+- Get your API Key from - https://thecatapi.com/
+
+### Tools
+- Body parser
+- Nodemon
+- Bootstrap
+- React Router
 
 ## How to design the solution
 
@@ -39,3 +50,15 @@ As a user
 So I can change my mind about a picture
 I want to be able to delete a picture 
 ```
+
+
+## Progress Report
+
+Jest 
+- Preset with MongoDB: MongoDB memory server allows to store your data in memory only
+
+To fix dependency issue
+1. Delete package-lock.json
+2. Delete node-modules
+3. Add the right dependencies version or delete the dependency in package.json
+4. Run `$ npm install`
