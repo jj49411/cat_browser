@@ -2,8 +2,7 @@ const mongoose = require('mongoose')
 const FavouriteModel = require('../../models/Favourite')
 const catMock = {
   name: 'Cat',
-  url: 'testUrl',
-  description: 'testDes'
+  url: 'testUrl'
 }
 
 describe('Favourite model unit test', () => {
@@ -27,7 +26,6 @@ describe('Favourite model unit test', () => {
     expect(cat._id).toBeDefined()
     expect(cat.name).toEqual('Cat')
     expect(cat.url).toEqual('testUrl')
-    expect(cat.description).toEqual('testDes')
   })
 
   it('should fail to add a new cat without required field', async () => {

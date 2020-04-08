@@ -12,8 +12,7 @@ router.post('/', (req, res) => {
 
   const newCat = new Favourite({
     name: req.body.name,
-    url: req.body.url,
-    description: req.body.description
+    url: req.body.url
   })
 
   newCat.save()
