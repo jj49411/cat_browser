@@ -1,3 +1,59 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Lobster&display=swap');
+* {
+  font-family: 'Lobster', cursive;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.nav-box {
+  background-color: #888888;
+  padding: 10px;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.nav-title {
+  margin-left: 12%;
+}
+
+.nav-option {
+  margin-right: 12%;
+}
+
+.nav-home {
+  font-size: 40;
+}
+
+.home-title {
+  margin-left: 13%;
+  margin-top: 30px; 
+  margin-bottom: 0px; 
+  color: #666666;
+}
+
+.pictures {
+  margin-top: 10px;
+  margin-bottom: 80px; 
+  margin: auto;
+  width: 80%;
+  padding: 10px; 
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
+}
+
+.pic-box {
+  width: 250px; 
+  flex-basis: 30%;
+  margin-right: 15px;
+  margin-bottom: 50px;
+}
+
+.a-cat{
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* to fit the div */
+  display: block;
+  box-shadow: 3px 3px 5px 2px #eeeeee;
+  margin-top: 50px;
 }

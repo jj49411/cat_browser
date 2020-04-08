@@ -23,6 +23,6 @@ describe('Pictures', () => {
   it('should fetch image data from API', async () => {
     expect(axios.get).toHaveBeenCalled();
     expect(axios.get).toHaveBeenCalledWith("https://api.thecatapi.com/v1/images/search", 
-    {"headers": {"x-api-key": process.env.API_KEY}, "params": {"limit": 50}})
+    {"headers": {"x-api-key": process.env.API_KEY}, "params": {"limit": 99}})
   })
 })

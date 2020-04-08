@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import '../../App.css'
 
 class Pictures extends Component {
 
@@ -15,7 +16,7 @@ class Pictures extends Component {
     
     axios.get('https://api.thecatapi.com/v1/images/search', {
       headers: {'x-api-key': process.env.API_KEY}, 
-      params: {limit: 50}
+      params: {limit: 99}
     })
       .then(response => {
         this.setState({
@@ -32,7 +33,9 @@ class Pictures extends Component {
     return(
       <div className='pictures'>
         {catsData.map(cat => (
-          <img src={cat.url} width='300' height='300'/>
+          <div className='pic-box'>
+            <img src={cat.url} className='a-cat'/>
+          </div>
         ))}
       </div>
 
