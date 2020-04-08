@@ -69,3 +69,14 @@ To fix dependency issue
 2. Delete node-modules
 3. Add the right dependencies version or delete the dependency in package.json
 4. Run `$ npm install`
+
+To solve MongoDB connection error
+- Type: MongoTimeoutError
+- Issue: It gives out new IPs everytime (DHCP) when I reconnect to the network, but Mongo Atlas only white lists the previously specified IP address
+- Solution: Check if the IP address specified correctly in the Network Access tab
+- Security -> Network Access -> IP Whitelist 
+
+CSS Flexbox
+- A useful layout model that allows elements to align and distribute space within a container
+- Learn more: https://www.youtube.com/watch?v=JJSoEo8JSnc
+
