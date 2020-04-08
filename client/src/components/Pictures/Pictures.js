@@ -8,9 +8,11 @@ class Pictures extends Component {
     super(props)
     this.state = {
       catsData: [],
+      visible: 3,
       isLoading: false,
       likedCats: []
     }
+    this.loadMore = this.loadMore.bind(this)
   }
 
   componentDidMount() {
@@ -24,6 +26,12 @@ class Pictures extends Component {
           isLoading: true,
           catsData: response.data
       })
+    })
+  }
+
+  loadMore() {
+    this.setState(pre => {
+      return {visible: pre.visible + 3}
     })
   }
 
@@ -41,18 +49,20 @@ class Pictures extends Component {
 
 
   render() {
-    const { catsData, isLoading } = this.state
+    const { catsData, isLoading, visible } = this.state
     console.log(this.state.likedCats)
     return(
-      <div className='pictures'>
-        {catsData.map(cat => (
-          <div className='pic-box'>
-            <img src={cat.url} className='a-cat'/>
-            <button id={cat.id} onClick={() => {this.like(cat.id, cat.url)}}>Like</button>
-          </div>
-        ))}
+      <div>
+        <div className='pictures'>
+          {catsData.slice(0, visible).map(cat => (
+            <div className='pic-box'>
+              <img src={cat.url} className='a-cat'/>
+              <button id={cat.id} onClick={() => {this.like(cat.id, cat.url)}}>Like</button>
+            </div>
+          ))}
+        </div>
+        <button className='loadmore-button'onClick={this.loadMore}>Load More</button>
       </div>
-
     )
   }
 }

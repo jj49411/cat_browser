@@ -12,6 +12,7 @@ jest.mock('axios')
 describe('Pictures', () => {
 
   let wrapper
+  let props
   const catMock = [
     {
       "breeds": [],
@@ -45,7 +46,7 @@ describe('Pictures', () => {
     {'headers': {'x-api-key': process.env.API_KEY}, 'params': {'limit': 10}})
   })
 
-  it('should have a button for every picture', () => {
+  it('should have a like button for every picture', () => {
     expect(wrapper.find('button')).toBeDefined()
   })
 
@@ -54,6 +55,10 @@ describe('Pictures', () => {
     wrapper = shallow((<button onClick={likeMock}></button>))
     wrapper.find('button').at(0).simulate('click')
     expect(likeMock).toHaveBeenCalled()
+  })
+
+  it('should have load more button ', () => {
+    expect(wrapper.find('.loadmore')).toBeDefined()
   })
 
 })
