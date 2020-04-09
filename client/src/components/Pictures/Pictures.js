@@ -5,8 +5,6 @@ import '../../App.css'
 import heart1 from '../../img/heart1.png'
 import heart2 from '../../img/heart2.png'
 
-
-
 class Pictures extends Component {
 
   constructor(props) {
@@ -54,7 +52,7 @@ class Pictures extends Component {
 
 
   render() {
-    const { catsData, isLoading, visible } = this.state
+    const { catsData, isLoading, visible, likedCats } = this.state
     console.log(this.state.likedCats)
     return(
       <div>
@@ -62,8 +60,8 @@ class Pictures extends Component {
           {catsData.slice(0, visible).map(cat => (
             <div className='pic-box'>
               <img src={cat.url} className='a-cat'/>
-              <button className='heart-box'>
-                <img src={heart1} className='heart' id={cat.id} onClick={() => {this.like(cat.id, cat.url)}}></img>
+              <button className='heart-box btn'>
+                <img src={likedCats.includes(cat.id) ? heart2 : heart1} className='heart' id={cat.id} onClick={() => {this.like(cat.id, cat.url)}}></img>
               </button>
             </div>
           ))}

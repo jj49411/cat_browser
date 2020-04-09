@@ -74,6 +74,11 @@
   margin-bottom: 0px;
 }
 
+.heart-box:focus {
+  outline: none;
+  box-shadow:none;
+}
+
 .heart {
   width: 30px;
   height: 30px;
@@ -89,4 +94,9 @@
   padding: 10px 30px;
   font-size: 60;
   border-color: #eeeeee;
+}
+
+.loadmore-button:focus {
+  outline: none;
+  box-shadow:none;
 }
