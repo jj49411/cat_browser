@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import '../../App.css'
 
+import heart1 from '../../img/heart1.png'
+import heart2 from '../../img/heart2.png'
+
+
+
 class Pictures extends Component {
 
   constructor(props) {
@@ -57,11 +62,15 @@ class Pictures extends Component {
           {catsData.slice(0, visible).map(cat => (
             <div className='pic-box'>
               <img src={cat.url} className='a-cat'/>
-              <button id={cat.id} onClick={() => {this.like(cat.id, cat.url)}}>Like</button>
+              <button className='heart-box'>
+                <img src={heart1} className='heart' id={cat.id} onClick={() => {this.like(cat.id, cat.url)}}></img>
+              </button>
             </div>
           ))}
         </div>
-        <button className='loadmore-button'onClick={this.loadMore}>Load More</button>
+        <div className='loadmore-box'>
+          <button type="button" className='loadmore-button btn-light'onClick={this.loadMore}>Load More</button>
+        </div>
       </div>
     )
   }
