@@ -34,6 +34,8 @@
 
 ## How to design the solution
 
+Layout sketch
+![layout](client/src/img/layout.jpg)
 
 ## User stories
 ```
