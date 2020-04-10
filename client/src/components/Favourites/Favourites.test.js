@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Favourites from './Favourites'
+import FavouritesList from '../FavouritesList/FavouritesList'
 
 
 describe('Favourites', () => {
@@ -19,4 +20,7 @@ describe('Favourites', () => {
     expect(wrapper.find('h1').length).toEqual(1)
   })
   
+  it('should render FavouritesList Component', () => {
+    expect(wrapper.containsMatchingElement(<FavouritesList />)).toEqual(true)
+  })
 })

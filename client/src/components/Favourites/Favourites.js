@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FavouritesList from '../FavouritesList/FavouritesList'
 
 class Favourites extends Component {
 
@@ -9,7 +10,10 @@ class Favourites extends Component {
 
   render() {
     return(
-      <h1 className='display-6 font-weight-light'>{this.props.title}</h1>
+      <div>
+        <h1 className='display-6 font-weight-light'>{this.props.title}</h1>
+        <FavouritesList />
+      </div>
     )
   }
 }
