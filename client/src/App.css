@@ -60,7 +60,16 @@
   object-fit: cover; /* to fit the div */
   display: block;
   box-shadow: 3px 3px 5px 2px #eeeeee;
-  /* margin-top: 30px; */
+  /* opacity: 0.5; */
+}
+
+.a-cat-over {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* to fit the div */
+  display: block;
+  box-shadow: 3px 3px 5px 2px #eeeeee;
+  opacity: 0.7;
 }
 
 /* .like-button {
