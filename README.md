@@ -1,5 +1,6 @@
 # Cat Browser
 
+A full-stack MERN web application that allows users to browse cat images and save to a favourites list. A user can like an image when browsing, view all the liked images and delete an image from the Favourites page.
 
 ![Demo Gif](https://)
 
@@ -19,6 +20,11 @@
 - Run `$ cd client && npm test` for the React tests
 
 ## Features
+- User can browse cat pictures on the home page
+- User can like an image and save to favourites list
+- User can visit the Favourites page
+- User can view all the liked images
+- User can delete an image from favourites list
 
 ## Technologies used
 
