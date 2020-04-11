@@ -27,16 +27,24 @@ A full-stack MERN web application that allows users to browse cat images and sav
 - User can delete an image from favourites list
 
 ## Technologies used
-
+- Javascript
+- React
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- Jest
+- Enzyme
 
 ### External Cat API
 - Get your API Key from - https://thecatapi.com/
 
 ### Tools
+- Axios
+- React Router
 - Body parser
 - Nodemon
 - Bootstrap
-- React Router
 
 ## How to design the solution
 
