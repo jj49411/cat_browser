@@ -82,3 +82,5 @@ CSS Flexbox
 - A useful layout model that allows elements to align and distribute space within a container
 - Learn more: https://www.youtube.com/watch?v=JJSoEo8JSnc
 
+Axios
+- `delete` requests with a body need it to be set under a `data` key

@@ -38,7 +38,7 @@
   padding: 10px; 
   display: flex;
   flex-wrap: wrap;
-  /* align-self: center; */
+  align-self: center;
   justify-content: center;
   /* background-color: lightpink; */
 }
@@ -51,7 +51,6 @@
   flex-basis: 30%;
   margin-right: 15px;
   margin-bottom: 50px;
-
 }
 
 .a-cat{
@@ -60,7 +59,6 @@
   object-fit: cover; /* to fit the div */
   display: block;
   box-shadow: 3px 3px 5px 2px #eeeeee;
-  /* opacity: 0.5; */
 }
 
 .a-cat-over {
@@ -123,6 +121,17 @@
 
 }
 
+.liked-box {
+  width: 250px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-basis: 30%;
+  margin-right: 15px;
+  margin-bottom: 50px;
+
+}
+
 .liked-list {
   margin-top: 20px;
   margin-bottom: 80px; 
@@ -132,4 +141,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+}
+
+.delete-button {
+  margin-top: 0px;
+  margin-right: 0px;
+  width: 45px;
+  height: 34px;
 }

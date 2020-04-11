@@ -4,7 +4,6 @@ import axios from 'axios'
 import FavouritesList from './FavouritesList'
 
 import Adapter from 'enzyme-adapter-react-16'
-import TestRunner from 'jest-runner'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -42,4 +41,15 @@ describe('FavouritesList', () => {
     expect(axios.get).toHaveBeenCalledWith("http://localhost:5000/favourites")
   })
 
+  it('should have a delete button for every picture', () => {
+    expect(wrapper.find('button')).toBeDefined()
+  })
+
+  it('should call handleDelete function when clicked on delete button', () => {
+    const deleteMock = jest.fn()
+    wrapper = shallow((<button onClick={deleteMock}></button>))
+    wrapper.find('button').at(0).simulate('click')
+    expect(deleteMock).toHaveBeenCalled()
+  })
+  
 })
