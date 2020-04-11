@@ -10,8 +10,8 @@ class Favourites extends Component {
 
   render() {
     return(
-      <div>
-        <h1 className='display-6 font-weight-light'>{this.props.title}</h1>
+      <div className='favourites-page'>
+        <h1 className='favourites-title'>{this.props.title}</h1>
         <FavouritesList />
       </div>
     )
