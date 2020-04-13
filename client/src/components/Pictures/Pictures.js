@@ -11,7 +11,7 @@ class Pictures extends Component {
     super(props)
     this.state = {
       catsData: [],
-      visible: 3,
+      visible: 33,
       isLoading: false,
       likedCats: []
     }
@@ -22,7 +22,7 @@ class Pictures extends Component {
     
     axios.get('https://api.thecatapi.com/v1/images/search', {
       headers: {'x-api-key': process.env.API_KEY}, 
-      params: {limit: 10}
+      params: {limit: 99}
     })
       .then(response => {
         this.setState({
@@ -34,7 +34,7 @@ class Pictures extends Component {
 
   loadMore() {
     this.setState(pre => {
-      return {visible: pre.visible + 3}
+      return {visible: pre.visible + 33}
     })
   }
 
