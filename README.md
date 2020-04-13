@@ -51,6 +51,25 @@ A full-stack MERN web application that allows users to browse cat images and sav
 - Layout sketch
 ![layout](client/src/img/layout.jpg)
 
+- Backend
+  - Start off the backend using Node, Express and MongoDB to create an API so the frontend can communicate with the database
+  - Create the model `Favourite` connecting with  MongoDB. The app only stores favourite cat pictures to the database
+  - Use schema-based solution Mongoose to model application data
+  - Set up routes for the API
+
+- Frontend
+  - Create a navbar, add `Home`, `Favourites` components and link the routes
+  - Extract `Navbar` to a separate component, to keep `app.js` simple and structured
+  - Add `Pictures` as a child component of `Home` component
+  - Fetch pictures from Cat API and display on home page
+  - Add `Like` button for each picture, clicking on it should store to the database by calling express API <POST>
+  - Add `Load More` button to limit the visible pics
+  - To know whether liked or not, it renders a filled heart icon after click on `Like`
+  - Create `FavouritesList` as a child component of `Favourites` component
+  - Fetch liked data by calling express API <DELETE> and show on the fevourites page
+  - Add image highlight when target is on mouse
+  - Click on `Delete` button should remove it from the database by calling express API <DELETE>
+
 ## User stories
 ```
 As a user
