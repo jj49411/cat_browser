@@ -3,7 +3,8 @@
 A full-stack MERN web application that allows users to browse cat images and save to a favourites list. A user can like an image when browsing, view all the liked images and delete an image from the Favourites page.
 
 ## Demo
-![Demo Gif Part 1](https://media.giphy.com/media/JrjXhMmjerPcjeG2Ok/giphy.gif) 
+
+![gif1](client/public/gif1.gif)
 ![Demo Gif Part 2](https://media.giphy.com/media/Lmx3hI7LA2k9MyfSVm/giphy.gif)
 
 ## To install and run the code
