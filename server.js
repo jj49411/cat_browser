@@ -18,7 +18,7 @@ mongoose
   .catch(err => console.log(err))
 
 app.use(bodyParse.json())
-app.use('/favourites', favouritesRouter)
+app.use('/api', favouritesRouter)
 
 // Serve static assets if in production
 if(process.env.NODE_ENV === 'production') {
@@ -26,8 +26,6 @@ if(process.env.NODE_ENV === 'production') {
   
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-  })
-  app.get("/favourites", (req, res) => {
   })
 }
 
