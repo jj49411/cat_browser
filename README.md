@@ -73,6 +73,20 @@ A full-stack MERN web application that allows users to browse cat images and sav
   - Add image highlight when target is on mouse
   - Click on `Delete` button should remove it from the database by calling express API <DELETE>
 
+- MongoDB database `favourites`
+  - Name (string)
+  - URL (string)
+  - DateAdded (date)
+
+- Express API
+  - Fetch all the favourite cats: `GET/favourites`
+  - Add a new favourite: `POST/favourites`
+  - Delete a stored cat: `DELETE/favourites`
+
+- External Cat API
+  - Fetch all public images
+  - Display on the home page
+  
 ## User stories
 ```
 As a user
