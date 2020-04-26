@@ -1,13 +1,14 @@
 # Cat Browser
+[Live Demo](#live-demo) | [Getting Started](#getting-started) | [Running Tests](#running-tests) | [Features](#features)| [Technologies Used](#technologies-used) | [How to Design the Solution](#how-to-design-the-solution) | [User Stories](#user-stories) | [Progress Report](#progress-report) |
 
 A full-stack MERN web application that allows users to browse cat images and save to a favourites list. A user can like an image when browsing, view all the liked images and delete an image from the Favourites page.
 
-## Demo
-
+## Live Demo
+The application is deployed to Heroku [here](https://cat-browser.herokuapp.com/)<br><br>
 ![gif1](client/public/gif1.gif)
 ![Demo Gif Part 2](https://media.giphy.com/media/Lmx3hI7LA2k9MyfSVm/giphy.gif)
 
-## To install and run the code
+## Getting Started
 
 - Clone the repo
 - Run `$ npm install`
@@ -17,7 +18,7 @@ A full-stack MERN web application that allows users to browse cat images and sav
 - Run `$ npm run dev` to start both servers
 
 
-## To run the test
+## Running Tests
 
 - Run `$ npm test` for the Express endpoint tests
 - Run `$ cd client && npm test` for the React tests
@@ -29,7 +30,7 @@ A full-stack MERN web application that allows users to browse cat images and sav
 - User can view all the liked images
 - User can delete an image from favourites list
 
-## Technologies used
+## Technologies Used
 - Javascript
 - React
 - Node.js
@@ -49,7 +50,7 @@ A full-stack MERN web application that allows users to browse cat images and sav
 - Nodemon
 - Bootstrap
 
-## How to design the solution
+## How to Design the Solution
 
 - Layout sketch
 ![layout](client/src/img/layout.jpg)
@@ -87,7 +88,7 @@ A full-stack MERN web application that allows users to browse cat images and sav
   - Fetch all public images
   - Display on the home page
   
-## User stories
+## User Stories
 ```
 As a user
 So I can browse cat pictures
