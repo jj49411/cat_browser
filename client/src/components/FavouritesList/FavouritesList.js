@@ -16,7 +16,7 @@ class FavouritesList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/favourites')
+    axios.get('/api')
     .then(response => {
       this.setState({
         isLoading: true,
@@ -42,7 +42,7 @@ class FavouritesList extends Component {
     const deleteCat = {
       name: cat.name
     }
-    axios.delete('http://localhost:5000/favourites',  { data: deleteCat })
+    axios.delete('/api',  { data: deleteCat })
     .then(res => console.log(res.data))
     .catch(err => console.log(err))
     
